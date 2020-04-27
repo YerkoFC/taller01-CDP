@@ -15,7 +15,7 @@ int main(){
 
     // Se inicializa el rut más pequeño
     unsigned long rut = 14916641;
-    // Archivo de lectura
+    // Archivo de lectura (Se debe indicar correctamente la ruta de este archivo)
     ifstream fileIn("puntajes.csv");
     // Se inicializa 'linea' para almacenar cada linea leida del fichero
     std::string linea;
@@ -39,7 +39,7 @@ int main(){
                 getline(fileIn, linea);
                 // Se guardan los puntajes de la linea en el vector
                 miVector = splitLinea(linea);
-                // Se imprimen los ruts junto con su promedio respectivo
+                // Se escriben en el fichero de salida los ruts junto con su promedio respectivo
                 fileOut << rut << ";" << avgPuntajes(miVector) << std::endl;
                 // Se le suma 1 a rut
                 rut++;
