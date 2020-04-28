@@ -15,10 +15,12 @@ int main(){
 
     // Se inicializa el rut más pequeño
     unsigned long rut = 14916641;
-    // Archivo de lectura (Se debe indicar correctamente la ruta de este archivo)
-    ifstream fileIn("puntajes.csv");
     // Se inicializa 'linea' para almacenar cada linea leida del fichero
-    std::string linea;
+    std::string linea, ruta;
+    std::cout << "Ingrese ruta del archivo a procesar: ";
+    std::cin >> ruta;
+    // Archivo de lectura (Se debe indicar correctamente la ruta de este archivo)
+    ifstream fileIn(ruta);
     // Se inicializa 'miVector' para almacenar los ptjes por cada rut
     std::vector<std::string> miVector;
     // Imprime un error si la operacion de lectura del fichero falla
